@@ -5,7 +5,8 @@ Twitch https://twitch.tv is a platform for people to broadcast a live video stre
 ![Paper sketch screenshot. A grid of video players displayed in a 16:9 window](./docs/sketch-small.jpg)
 
 * Digital installation: a screen, as large and with as many pixels as possible.
-* A masonry grid layout, with 16:9 boxes of varying sizes. They nest together like puzzle pieces to form a 16:9 rectangle, the whole screen.
+* A masonry grid layout, with ~~16:9~~ boxes of varying sizes. They nest together like puzzle pieces to form a 16:9 rectangle, the whole screen.
+    * Might be easier to build the layout with a variety of aspect ratios. Details on cropping down below.
 * Each box shows a popular live stream active at that moment, say from a list of the top 50 streamers.
     * Normalise by category to show more of a cross section
 * The size of each box is determined by the number of streamers watching that stream at that moment.
@@ -50,6 +51,8 @@ _Gallery installation from Adam Pendleton. Source: [Pinterest](https://www.pinte
 * [masonry layout random size locked aspect ratio css js](https://www.google.com.au/search?q=masonry+layout+random+size+locked+aspect+ratio+css+js&oq=masonry+layout+random+size+locked+aspect+ratio+css+js)
 * [css grid random sizes](https://www.google.com.au/search?q=css+grid+random+sizes)
 * [Aspect Ratios for Grid Items - CSS Tricks Chris Coyier](https://css-tricks.com/aspect-ratios-grid-items/)
+
+### Twitch mobile app cropping
 
 ![Twitch mobile app](./docs/twitch-mobile-app.gif)
 _Source: [Twitch blog](https://blog.twitch.tv/new-twitch-mobile-app-available-now-aa527264091b)
