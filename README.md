@@ -13,12 +13,15 @@ Twitch https://twitch.tv is a platform for people to broadcast a live video stre
     * More viewers, bigger portion of the screen
 * Have to decide if the focus is to actually be able to follow the content of the more popular streams or just to take in the variety (or similarity) of what's happening on Twitch
 
+![Reference image of gallery installation](./docs/gallery.jpg)
+_Gallery installation from Adam Pendleton. Source: [Pinterest](https://www.pinterest.com.au/pin/311944711666527682/) (Original link is a 404)_
+
 ![Mockup sreenshot. A grid of video streams all playing at the same time.](./docs/mockup.jpg)
 
 ## `ａｌｇｏｒｉｔｈｍ`
 
-* Determine how many streamers to display on the screen (ex: 20)
-* Fetch the data of 20 streamers 
+* Determine how many streamers to display on the screen (ex: 10, 20, 50)
+* Fetch the data of X streamers 
     * Stream embed url & viewer count, other data
     * “Top streams” - a mixture of top streams in a variety of categories. An interesting and sensible cross section.
 * Make a total of the viewer count of all of the fetched streams
@@ -41,9 +44,6 @@ _WinDirStat of my C:\ drive_
     * Watch velocity & acceleration of chat volume on each stream, so activity is normalised by that particular stream. 
     * Temporary bump in size? 
 * Rotate audio streams. Switch to audio of streams where big shit is happening.
-
-![Reference image of gallery installation](./docs/gallery.jpg)
-_Gallery installation from Adam Pendleton. Source: [Pinterest](https://www.pinterest.com.au/pin/311944711666527682/) (Original link is a 404)_
 
 ### Like this but not this
 
