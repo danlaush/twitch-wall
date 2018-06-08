@@ -32,7 +32,7 @@ Twitch https://twitch.tv is a platform for people to broadcast a live video stre
     * Boxes shift around the screen as they move to accommodate streams that start and end
 
 ![Reference image of WinDirStat](./docs/windirstat.png)
-_WinDirStat_
+_WinDirStat of my C:\ drive_
 
 ## Nice to haves
 
@@ -40,6 +40,9 @@ _WinDirStat_
     * Watch velocity & acceleration of chat volume on each stream, so activity is normalised by that particular stream. 
     * Temporary bump in size? 
 * Rotate audio streams. Switch to audio of streams where big shit is happening.
+
+![Reference image of gallery installation](./docs/gallery.jpg)
+_Gallery installation from Adam Pendleton. Source: [Pinterest](https://www.pinterest.com.au/pin/311944711666527682/) (Original link is a 404)_
 
 ### Like this but not this
 
@@ -49,6 +52,8 @@ _WinDirStat_
 * [Aspect Ratios for Grid Items - CSS Tricks Chris Coyier](https://css-tricks.com/aspect-ratios-grid-items/)
 
 ![Twitch mobile app](./docs/twitch-mobile-app.gif)
+_Source: [Twitch blog](https://blog.twitch.tv/new-twitch-mobile-app-available-now-aa527264091b)
+
 The gif illustrates how the Twitch mobile app handles rotation. It seems natural/supported to clip streams to different aspect ratios. It would be useful for generating a sensible array of rectangles to make a 16:9 total picture if it could be a mixture of aspect ratios of videos. It would simplify the math required to generate the grid. (I made that last sentence up. It just seems like it would be easier somehow.)
 
 I feel like this would be most effective with the highest viewer count streams available as a way to smooth out the speed of transitions. The velocity and acceleration of viewer count would be the most reliable and least likely to spike by ridiculous percentages in viewers very quickly. Unreliable velocity would result in awkwardly-quick changes in size for particular streams. I want to watch the screen grow and change over the course of hours, with brief attention-grabbing “big moments” on those streams.
