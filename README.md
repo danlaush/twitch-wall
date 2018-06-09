@@ -1,10 +1,10 @@
-# App idea: What is Twitch: a streaming wall
+# What is Twitch: a streaming wall
 
-Twitch https://twitch.tv is a platform for people to broadcast a live video stream to the world, and create communities around shared live experiences. Twitch is an online window the world as it exists at this moment. What does this world look like?
+Twitch https://twitch.tv is a platform for people to broadcast a live video stream to the world, and create communities around shared live experiences. Twitch is an online window the world as it exists at this moment. What does this world look like? (A lot of video games)
 
 ![Paper sketch screenshot. A grid of video players displayed in a 16:9 window](./docs/sketch-small.jpg)
 
-* Digital installation: a screen, as large and with as many pixels as possible.
+* Digital installation: a screen, as large and with as many pixels as possible. Think jumbotron or billboard sized.
 * A masonry grid layout, with ~~16:9~~ boxes of varying sizes. They nest together like puzzle pieces to form a 16:9 rectangle, the whole screen.
     * Might be easier to build the layout with a variety of aspect ratios. Details on cropping down below.
 * Each box shows a popular live stream active at that moment, say from a list of the top 50 streamers.
@@ -14,7 +14,7 @@ Twitch https://twitch.tv is a platform for people to broadcast a live video stre
 * Have to decide if the focus is to actually be able to follow the content of the more popular streams or just to take in the variety (or similarity) of what's happening on Twitch
 
 ![Reference image of gallery installation](./docs/gallery.jpg)
-_Gallery installation from Adam Pendleton. Source: [Pinterest](https://www.pinterest.com.au/pin/311944711666527682/) (Original link is a 404)_
+_Image a wall of this size, with a collage of video streams all going at once. This is Twitch. Gallery installation from Adam Pendleton. Source: [Pinterest](https://www.pinterest.com.au/pin/311944711666527682/) (Original link is a 404)_
 
 ![Mockup sreenshot. A grid of video streams all playing at the same time.](./docs/mockup.jpg)
 
@@ -57,9 +57,16 @@ _WinDirStat of my C:\ drive_
 ![Twitch mobile app](./docs/twitch-mobile-app.gif)
 _Source: [Twitch blog](https://blog.twitch.tv/new-twitch-mobile-app-available-now-aa527264091b)
 
-The gif illustrates how the Twitch mobile app handles rotation. It seems natural/supported to clip streams to different aspect ratios. It would be useful for generating a sensible array of rectangles to make a 16:9 total picture if it could be a mixture of aspect ratios of videos. It would simplify the math required to generate the grid. (I made that last sentence up. It just seems like it would be easier somehow.)
+* The gif illustrates how the Twitch mobile app handles rotation. 
+* It seems natural/supported to clip streams to different aspect ratios. 
+* It would be useful for generating a sensible array of rectangles to make a 16:9 total picture if it could be a mixture of aspect ratios of videos. 
+* It would simplify the math required to generate the grid. (I made that last sentence up. It just seems like it would be easier somehow.)
 
 I feel like this would be most effective with the highest viewer count streams available as a way to smooth out the speed of transitions. The velocity and acceleration of viewer count would be the most reliable and least likely to spike by ridiculous percentages in viewers very quickly. Unreliable velocity would result in awkwardly-quick changes in size for particular streams. I want to watch the screen grow and change over the course of hours, with brief attention-grabbing “big moments” on those streams.
+
+### Boy that sure sounds like a lot of bandwidth
+
+20 streams is a lot of streaming video at once. Maybe start with showing a recent screenshot for the stream and update the image every [X intervals]. Twitch keeps track of this for icons on the site, is it available in the API? Sub in the video stream for the top Y biggest streams.
 
 
 
