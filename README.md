@@ -11,6 +11,7 @@ Twitch https://twitch.tv is a platform for people to broadcast a live video stre
 * The size of each box is determined by the number of streamers watching that stream at that moment.
     * More viewers, bigger portion of the screen
 * Have to decide if the focus is to actually be able to follow the content of the more popular streams or just to take in the variety (or similarity) of what's happening on Twitch
+* **Image this in VR** You're in the middle of a sphere looking outward at a 3d projected map of twitch streams. Point your cursor at a video and it shows some metadata about it.
 
 ![Mockup sreenshot. A grid of video streams all playing at the same time.](./docs/mockup.jpg)
 
