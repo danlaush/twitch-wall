@@ -2,6 +2,9 @@
 
 Twitch https://twitch.tv is a platform for people to broadcast a live video stream to the world, and create communities around shared live experiences. Twitch is an online window the world as it exists at this moment. What does this world look like? (A lot of video games)
 
+* **Stage 1:** Can we do a 2d masonry? https://codepen.io/danlaush/pen/vrmedE
+   * Using [Packery](https://packery.metafizzy.co/) for layout. [Masonry thoughts](#masonry)
+
 ![Paper sketch screenshot. A grid of video players displayed in a 16:9 window](./docs/sketch-small.jpg)
 
 * Digital installation: a screen, as large and with as many pixels as possible. Think jumbotron or billboard sized.
@@ -69,5 +72,10 @@ I feel like this would be most effective with the highest viewer count streams a
 
 20 streams is a lot of streaming video at once. Maybe start with showing a recent screenshot for the stream and update the image every [X intervals]. Twitch keeps track of this for icons on the site, is it available in the API? Sub in the video stream for the top Y biggest streams.
 
+Although why waste the NBN? Fill the tubes.
 
+## Masonry
 
+Packery is a good first start. I think if I organise my grid options a bit better I can eliminate more empty space. How can I make sure the layout is "interesting" every time, like make sure the sizes are mixed up and it's not all the big ones in one corner.
+
+Not sure if Packery will work long term. The goal is to have the sizes of the boxes grow and shrink over time, and I think Packery "updates" by removing and replacing all the divs every time. This would likely interrupt stream playback. Might have to roll my own. Google: bin-packing algorithm.
