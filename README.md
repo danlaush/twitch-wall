@@ -2,7 +2,25 @@
 
 Twitch https://twitch.tv is a platform for people to broadcast a live video stream to the world, and create communities around shared live experiences. Twitch is an online window the world as it exists at this moment. What does this world look like? (A lot of video games)
 
-* **Stage 1:** Can we do a 2d masonry? https://codepen.io/danlaush/pen/vrmedE
+![](./docs/2024-01-21-screenshot.png)
+
+## Run it
+
+This project uses Deno instead of Node because I wanted to fetch server modules at runtime instead of having to configure a manual install step.
+
+```
+deno run -A server.js
+```
+
+## implementation?
+
+Implementing this as a `<canvas/>` would provide more control, but it appears that Twitch streams can only be embedded via the official iframe, there is no public api of the raw video feed. This means the feeds must be displayed as DOM nodes in the HTML document. 
+
+HTML pages can themselves be embedded in a Canvas but it essentially requires taking screenshots of the page, and `<iframe>`s must allow permission to be included in that.
+
+## 2d masonry?
+
+https://codepen.io/danlaush/pen/vrmedE
    * Using [Packery](https://packery.metafizzy.co/) for layout. [Masonry thoughts](#masonry)
 
 ![Paper sketch screenshot. A grid of video players displayed in a 16:9 window](./docs/sketch-small.jpg)
