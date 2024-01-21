@@ -6,10 +6,8 @@ Twitch https://twitch.tv is a platform for people to broadcast a live video stre
 
 ## Run it
 
-This project uses Deno instead of Node because I wanted to fetch server modules at runtime instead of having to configure a manual install step.
-
 ```
-deno run -A server.js
+node server.mjs
 ```
 
 ## implementation?
