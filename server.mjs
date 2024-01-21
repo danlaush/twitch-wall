@@ -1,7 +1,7 @@
-import express from "npm:express";
-import { load } from "https://deno.land/std/dotenv/mod.ts";
+import express from "express";
+import 'dotenv/config'
 
-const {TWITCH_ACCESS_TOKEN,TWITCH_CLIENT_ID} = await load();
+const {TWITCH_ACCESS_TOKEN,TWITCH_CLIENT_ID} = process.env;
 
 const app = express();
 
