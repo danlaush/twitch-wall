@@ -117,7 +117,7 @@ function convertRange( value, r1, r2 ) {
 }
 
 async function fetchTopStreams(count) {
-    return await fetch(`/topStreams?count=${count}`)
+    return await fetch(`/api/topStreams?count=${count}`)
         .then(checkOk)
         .then(res => res.json())
         .then(({data}) => {

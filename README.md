@@ -6,8 +6,17 @@ Twitch https://twitch.tv is a platform for people to broadcast a live video stre
 
 ## Run it
 
+This is deployed to Vercel and uses its Serverless Functions to create an API. To run this locally requires the Vercel CLI.
+
+**First time setup**
+```bash
+$ pnpm i -g vercel
+$ vercel env add # repeat for all in .env.example
 ```
-node server.mjs
+
+**Dev**
+```bash
+$ vercel dev
 ```
 
 ## implementation?
