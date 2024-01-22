@@ -81,7 +81,7 @@ function App (props) {
                     <li key=${s.user_name}>
                         ${!DEBUG_STATIC && s.showStream
                             ? html`<iframe
-                                src="https://player.twitch.tv/?channel=${s.user_name}&parent=localhost&muted=true"
+                                src="https://player.twitch.tv/?channel=${s.user_name}&parent=localhost&parent=twitch-wall.vercel.app&muted=true"
                                 width=${s.size}
                                 height=${s.size/16*9}
                                 allowfullscreen
