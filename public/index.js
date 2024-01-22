@@ -9,8 +9,8 @@ const html = htm.bind(h);
 
 const DEBUG_STATIC = false;
 const STREAM_COUNT_DEFAULT = 50;
-const UPDATE_STREAMS_INTERVAL_MS = 45000;
 const TRANSITION_INTERVAL_MS = 45000;
+const UPDATE_STREAMS_INTERVAL_MS = 90000;
 
 const mediaSizeMax = 640;
 const mediaSizeMin = 100;
