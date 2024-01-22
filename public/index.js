@@ -4,12 +4,11 @@ import { h, Component, Fragment, render } from 'https://esm.sh/preact';
 import { useState, useEffect, useRef } from 'https://esm.sh/preact/hooks';
 import htm from 'https://esm.sh/htm';
 
-let pckry
 // Initialize htm with Preact
 const html = htm.bind(h);
 
 const DEBUG_STATIC = false;
-const STREAM_COUNT_DEFAULT = 30;
+const STREAM_COUNT_DEFAULT = 50;
 const UPDATE_STREAMS_INTERVAL_MS = 45000;
 const TRANSITION_INTERVAL_MS = 45000;
 
@@ -20,9 +19,12 @@ function App (props) {
     const [streams, setStreams] = useState([])
     const [streamCount, setStreamCount] = useState(STREAM_COUNT_DEFAULT);
     const [videoCount, setVideoCount] = useState(2);
+    const [animationDuration, setAnimationDuration] = useState(TRANSITION_INTERVAL_MS)
+    const [updateStreamsInterval, setUpdateStreamsInterval] = useState(UPDATE_STREAMS_INTERVAL_MS)
     const videoCountRef = useRef();
     const streamCountRef = useRef()
     const intervalRef = useRef()
+    const packery = useRef()
 
     // the setInterval() callback freezes video count
     // use a ref to create a global variable
@@ -41,29 +43,34 @@ function App (props) {
                 setStreams(shuffled)
             })
             .then(s => {
-                pckry.reloadItems()
-                pckry.layout()
+                packery.current.reloadItems()
+                packery.current.layout()
             })
     }
 
     function triggerUpdateStreams() {
         updateStreams()
-        intervalRef.current = setInterval(updateStreams, UPDATE_STREAMS_INTERVAL_MS)
+        intervalRef.current = setInterval(updateStreams, updateStreamsInterval)
     }
 
     useEffect(() => {
         var streamContainer = document.querySelector('#streams');
-        pckry = new Packery(streamContainer, {
+        packery.current = new Packery(streamContainer, {
             itemSelector: '#streams li',
-            transitionDuration: `${TRANSITION_INTERVAL_MS}ms`
+            transitionDuration: `${animationDuration}ms`
         });
         triggerUpdateStreams()
     }, [])
+
+    useEffect(() => {
+        packery.current.options.transitionDuration = `${animationDuration}ms`
+    }, [animationDuration])
 
     return html`
         <div id="app">
             <details id="controls">
                 <summary><span class="sr-only">Settings</span></summary>
+                <h1>This is Twitch</h1>
                 <ul>
                     <li>
                         <label for="streamCount">Stream count</label>
@@ -72,6 +79,14 @@ function App (props) {
                     <li>
                         <label for="videoCount">Video count</label>
                         <input id="videoCount" type="number" value=${videoCount} onchange=${e => setVideoCount(Number(e.target.value))} />
+                    </li>
+                    <li>
+                        <label for="animationDuration">Animation duration (ms)</label>
+                        <input id="animationDuration" type="number" value=${animationDuration} onchange=${e => setAnimationDuration(Number(e.target.value))} />
+                    </li>
+                    <li>
+                        <label for="updateInterval">Update interval (ms)</label>
+                        <input id="updateInterval" type="number" value=${updateStreamsInterval} onchange=${e => setUpdateStreamsInterval(Number(e.target.value))} />
                     </li>
                 </ul>
                 <button onclick=${() => triggerUpdateStreams()}>Update</button>
