@@ -90,6 +90,7 @@ function App (props) {
                     </li>
                 </ul>
                 <button onclick=${() => triggerUpdateStreams()}>Update</button>
+                <a href="https://github.com/danlaush/twitch-wall">Github</a>
             </details>
             <ul id="streams">
                 ${streams.map(s => html`
